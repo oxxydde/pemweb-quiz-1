@@ -22,3 +22,19 @@ table tr * {
 table tr {
     height: 2em;
 }
+
+/* Login Section */
+
+form div {
+    margin: 7px 0;
+}
+
+form input.textfield {
+    margin: 10px 0;
+    width: 20%;
+}
+
+form input.login-btn {
+    width: 8%;
+    height: 35px;
+}
