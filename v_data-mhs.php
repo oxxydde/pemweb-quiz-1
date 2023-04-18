@@ -15,7 +15,6 @@
                 echo 'Admin</h4>';
                 echo '<a href=".?logout=1">Log Out</a>';
                 echo '<br></br>';
-
             } else {
                 echo 'Guest</h4>';
                 echo '<a href="login.php">Log In</a>';
