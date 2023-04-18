@@ -1,6 +1,6 @@
 let rows = document.querySelectorAll(".row");
 
-rows.forEach((el, i) => {
+rows.forEach((el) => {
     // Attempt updating when clicked 
     el.querySelector('.update').addEventListener('click', () => {
         console.log("update triggered!");
