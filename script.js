@@ -13,15 +13,14 @@ rows.forEach((el, i) => {
     });
 
     el.querySelector('.delete').addEventListener('click', () => {
-        console.log("delete triggered!");
-        rows[i].remove();
+        el.remove();
 
         // refresh new row children
         rows = document.querySelectorAll(".row");
 
         // then adjust numbering again
-        for (it = i; it < rows.length; it++) {
-            rows[it].children[0].textContent = it+1;
-        }
+        rows.forEach((in_el, in_i) => {
+            in_el.children[0].textContent = in_i + 1;
+        });
     });
 });

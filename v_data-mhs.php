@@ -36,14 +36,14 @@
             </tr>
             <?php 
             for ($row = 1; $row <= 10; $row++) {
-                echo '<tr>';
+                echo '<tr class="row">';
                 for ($col = 1; $col <= 5; $col++) {
                     echo '<td>' . (($col > 1) ? "Data $row, $col" : $row) . '</td>';
                 }
                 if ($isAdmin) { ?>
                 <td>
-                    <button class="action-btn">Update</button>
-                    <button class="action-btn">Hapus</button>
+                    <button class="action-btn update">Update</button>
+                    <button class="action-btn delete">Hapus</button>
                 </td>
                 <?php }
                 echo '</tr>';
@@ -51,5 +51,6 @@
             ?>
         </table>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
