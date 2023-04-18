@@ -41,10 +41,12 @@
                 for ($col = 1; $col <= 5; $col++) {
                     echo '<td>' . (($col > 1) ? "Data $row, $col" : $row) . '</td>';
                 }
-                // isAdmin
-                if ($isAdmin) {
-                    echo '<td>Admin</td>';
-                }
+                if ($isAdmin) { ?>
+                <td>
+                    <button class="action-btn">Update</button>
+                    <button class="action-btn">Hapus</button>
+                </td>
+                <?php }
                 echo '</tr>';
             }
             ?>

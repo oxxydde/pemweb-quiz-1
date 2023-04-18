@@ -20,5 +20,18 @@ table tr * {
 }
 
 table tr {
-    height: 2em;
+    height: 2.3em;
+}
+
+.action-btn {
+    background-color: rgb(248, 181, 157);
+    border: none;
+    transition: ease 0.3s;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+}
+
+.action-btn:hover {
+    background-color: coral;
 }
