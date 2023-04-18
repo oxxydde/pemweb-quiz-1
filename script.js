@@ -1,9 +1,5 @@
 let rows = document.querySelectorAll(".row");
 
-function refreshRows() {
-    
-}
-
 rows.forEach((el, i) => {
     // Attempt updating when clicked 
     el.querySelector('.update').addEventListener('click', () => {
