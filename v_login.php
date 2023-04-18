@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Halaman Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <h2>Login ke Sistem Data Mahasiswa</h2>
