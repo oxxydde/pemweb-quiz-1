@@ -57,6 +57,13 @@ table tr {
     margin: 10px 0;
 }
 
-/* .edit-btns {
-    
-} */
+.confirm-btns {
+    margin: 7px 0;
+}
+
+.confirm-btns input {
+    height: 2rem;
+    width: 5rem;
+    font-weight: bold;
+    cursor: pointer;
+}

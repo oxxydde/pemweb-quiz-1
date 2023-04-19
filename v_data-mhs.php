@@ -65,9 +65,9 @@
                         <input type="text" class="textfield" name="prodi" id="prodi">
                         <span>Email</span>
                         <input type="text" class="textfield" name="email" id="email">
-                        <div id="edit-btns">
-                            <input type="button" id="update-confirm" value="Ubah">
-                            <input type="button" id="cancel-confirm" value="Batal">
+                        <div class="confirm-btns">
+                            <input type="button" class="action-btn" id="update-confirm" value="Ubah">
+                            <input type="button" class="action-btn" id="cancel-confirm" value="Batal">
                         </div>
                 </div>
             </div>

@@ -48,7 +48,6 @@ rows.forEach((el) => {
 
         const goUpdate = () => {
             editInputs.forEach((inputs, j) => {
-                console.log(inputs);
                 activeEditElement.children[j+1].textContent = inputs.value;
             });
             resetState();
