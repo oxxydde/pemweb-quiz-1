@@ -2,8 +2,18 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.inner {
+    display: flex;
+    flex-direction: row;
+}
+
+table, .edit-container {
+    display: inline-block;
+}
+
 table {
     border-collapse: collapse;
+    margin-right: 12px;
 }
 
 table * {
@@ -35,3 +45,18 @@ table tr {
 .action-btn:hover {
     background-color: coral;
 }
+
+
+.edit-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.edit-container span {
+    margin: 10px 0;
+}
+
+/* .edit-btns {
+    
+} */
