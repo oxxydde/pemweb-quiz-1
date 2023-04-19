@@ -49,7 +49,7 @@ rows.forEach((el) => {
         const goUpdate = () => {
             editInputs.forEach((inputs, j) => {
                 console.log(inputs);
-                el.children[j+1].textContent = inputs.value;
+                activeEditElement.children[j+1].textContent = inputs.value;
             });
             resetState();
         };
