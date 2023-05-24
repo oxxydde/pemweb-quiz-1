@@ -73,8 +73,8 @@
             </div>
             <?php } ?>
     </div>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>

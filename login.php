@@ -1,6 +1,6 @@
 <?php 
 
-require 'c_login.php';
+require './controller/c_login.php';
 
 $login = new login();
 

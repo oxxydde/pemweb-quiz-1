@@ -5,7 +5,7 @@ class login {
         if ($_COOKIE['user'] == 'admin') {
             header('Location: index.php');
         } else {
-            include 'v_login.php';
+            include './view/v_login.php';
         }
     }
 
