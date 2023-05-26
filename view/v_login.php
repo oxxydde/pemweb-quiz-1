@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <title>Halaman Login</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./assets/login.css">
 </head>
 <body>
     <h2>Login ke Sistem Data Mahasiswa</h2>
-    <?php 
+    <!-- <?php 
     if ($wrongCredential) {
         echo '<script type="text/javascript">alert("Username atau password anda salah!");</script>';
     }
-    ?>
+    ?> -->
     <form action="./login.php" method="post">
         <div class="username">
             <span>Username</span>

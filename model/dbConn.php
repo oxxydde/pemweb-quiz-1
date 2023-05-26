@@ -1,12 +1,12 @@
 <?php 
 
-$serverName = "localhost";
-$username = "root";
-$password = "";
+$dbServerName = "localhost";
+$dbUsername = "root";
+$dbPassword = "";
 $dbName = "pemweb_tugas_1";
 
-$conn = new mysqli($serverName, $username, $password, $dbName);
+$conn = new mysqli($dbServerName, $dbUsername, $dbPassword, $dbName);
 
 if ($conn->connect_error) {
-    exit(1);
+    echo 'mySQL connect err!';
 }

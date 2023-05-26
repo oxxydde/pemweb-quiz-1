@@ -12,9 +12,9 @@
     <div class="container">
         <h4>Halo,
             <?php
-            if ($isAdmin) {
-                echo 'Admin</h4>';
-                echo '<a href=".?logout=1">Log Out</a>';
+            if (isset($_COOKIE["user"])) {
+                echo $_COOKIE["user"] . "</h4>";
+                echo '<a href="login.php?logout=1">Log Out</a>';
                 echo '<br></br>';
             } else {
                 echo 'Guest</h4>';
@@ -22,7 +22,21 @@
                 echo '<br></br>';
             }
             ?>
-            <div class="inner">
+            <div class="inner" id="add" style="flex-direction: column; width: 33%;">
+                <h3>Tambah Data Mahasiswa</h3>
+                <span>NIM</span>
+                <input type="text" class="textfield" name="nim" id="nim">
+                <span>Nama</span>
+                <input type="text" class="textfield" name="nama" id="nama">
+                <span>Program Studi</span>
+                <input type="text" class="textfield" name="prodi" id="prodi">
+                <span>Email</span>
+                <input type="text" class="textfield" name="email" id="email">
+                <div class="confirm-btns">
+                    <input type="button" class="action-btn" id="add-confirm" value="Tambah">
+                </div>
+            </div>
+            <div class="inner" id="data">
                 <table>
                     <tr>
                         <th>No</th>
@@ -31,18 +45,21 @@
                         <th>Program Studi</th>
                         <th>Email</th>
                         <?php
-                        if ($isAdmin) {
+                        if (isset($_COOKIE["user"])) {
                             echo '<th>Aksi</th>';
                         }
                         ?>
                     </tr>
                     <?php
-                    for ($row = 1; $row <= 10; $row++) {
+                    $counter = 0;
+                    foreach ($mahasiswas as $row) {
                         echo '<tr class="row">';
-                        for ($col = 1; $col <= 5; $col++) {
-                            echo '<td>' . (($col > 1) ? "Data $row, $col" : $row) . '</td>';
-                        }
-                        if ($isAdmin) { ?>
+                        echo '<td>' . ++$counter . '</td>';
+                        echo '<td>' . $row->getNim() . '</td>';
+                        echo '<td>' . $row->getNama() . '</td>';
+                        echo '<td>' . $row->getProdi() . '</td>';
+                        echo '<td>' . $row->getEmail() . '</td>';
+                        if (isset($_COOKIE["user"])) { ?>
                             <td>
                                 <button class="action-btn update">Update</button>
                                 <button class="action-btn delete">Hapus</button>
@@ -52,13 +69,11 @@
                     }
                     ?>
                 </table>
-                <?php 
-                if ($isAdmin) {
+                <?php
+                if (isset($_COOKIE["user"])) {
                 ?>
-                <div class="edit-container" style="display: none">
-                    <h3>Ubah Data Mahasiswa</h3>
-                        <span>NIM</span>
-                        <input type="text" class="textfield" name="nim" id="nim">
+                    <div class="edit-container" style="display: none">
+                        <h3>Ubah Data Mahasiswa</h3>
                         <span>Nama</span>
                         <input type="text" class="textfield" name="nama" id="nama">
                         <span>Program Studi</span>
@@ -69,9 +84,9 @@
                             <input type="button" class="action-btn" id="update-confirm" value="Ubah">
                             <input type="button" class="action-btn" id="cancel-confirm" value="Batal">
                         </div>
-                </div>
+                    </div>
             </div>
-            <?php } ?>
+        <?php } ?>
     </div>
     <link rel="stylesheet" href="./assets/style.css">
     <script src="./assets/script.js"></script>
