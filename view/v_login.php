@@ -6,23 +6,23 @@
 </head>
 <body>
     <h2>Login ke Sistem Data Mahasiswa</h2>
-    <!-- <?php 
-    if ($wrongCredential) {
-        echo '<script type="text/javascript">alert("Username atau password anda salah!");</script>';
-    }
-    ?> -->
     <form action="./login.php" method="post">
         <div class="username">
             <span>Username</span>
             <br>
-            <input type="text" class="textfield" name="username" id="username">
+            <input type="text" class="textfield" name="username" id="username" required>
         </div>
         <div class="password">
             <span>Password</span>
             <br>
-            <input type="password" class="textfield" name="password" id="password">
+            <input type="password" class="textfield" name="password" id="password" required>
         </div>
         <input class="login-btn" type="submit" value="Masuk">
     </form>
+    <?php 
+    if ($wrongInput) {
+        echo '<script type="text/javascript">alert("Username atau password anda salah!");</script>';
+    }
+    ?>
 </body>
 </html>

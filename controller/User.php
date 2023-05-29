@@ -26,6 +26,7 @@ class User {
             header('Location: index.php');
             return;
         }
+        setcookie("wrongpass", true, time() + 5);
         header('Location: login.php');
 
     }
@@ -34,6 +35,7 @@ class User {
         if (isset($_COOKIE['user'])) {
             header('Location: index.php');
         } else {
+            $wrongInput = isset($_COOKIE["wrongpass"]);
             include './view/v_login.php';
         }
     }
