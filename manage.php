@@ -1,7 +1,7 @@
 <?php 
 
-require './controller/Admin.php';
+require './controller/c_mahasiswa.php';
 
 if (isset($_POST["method"])) {
-    echo Admin::handle($_POST);
+    echo c_mahasiswa::handle($_POST);
 }

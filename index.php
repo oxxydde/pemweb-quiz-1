@@ -1,4 +1,4 @@
 <?php
 
-require './controller/Mahasiswa.php';
-Mahasiswa::dataMhsInvoke();
+require './controller/c_mahasiswa.php';
+c_mahasiswa::dataMhsInvoke();

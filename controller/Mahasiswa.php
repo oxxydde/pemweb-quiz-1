@@ -22,16 +22,4 @@ class Mahasiswa {
     public function getProdi() {
         return $this->prodi;
     }
-
-    public static function dataMhsInvoke() {
-        require './model/m_mahasiswa.php';
-        $mhsTmp = m_mahasiswa::getDataMahasiswa();
-        $mahasiswas = array();
-
-        foreach($mhsTmp as $i) {
-            $mahasiswas[] = new Mahasiswa($i["nim"], $i["nama"], $i["email"], $i["programStudi"]);
-        }
-
-        include './view/v_data-mhs.php';
-    }
 }

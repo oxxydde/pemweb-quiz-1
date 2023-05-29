@@ -21,6 +21,7 @@
     </form>
     <?php 
     if ($wrongInput) {
+        setcookie("wrongpass", null, time() - 7200);
         echo '<script type="text/javascript">alert("Username atau password anda salah!");</script>';
     }
     ?>

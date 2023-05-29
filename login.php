@@ -1,11 +1,11 @@
 <?php 
 
-require './controller/Admin.php';
+require './controller/c_login.php';
 
 if (isset($_POST["username"])) {
-    User::login($_POST);
+    c_login::login($_POST);
 } else if (isset($_GET["logout"])) {
-    Admin::logout();
+    c_login::logout();
 } else {
-    User::invoke();
+    c_login::invoke();
 }
