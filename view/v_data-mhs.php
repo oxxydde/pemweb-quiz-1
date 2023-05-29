@@ -21,6 +21,7 @@
                 echo '<a href="login.php">Log In</a>';
                 echo '<br></br>';
             }
+            if (isset($_COOKIE["user"])) {
             ?>
             <div class="inner" id="add" style="flex-direction: column; width: 33%;">
                 <h3>Tambah Data Mahasiswa</h3>
@@ -36,6 +37,7 @@
                     <input type="button" class="action-btn" id="add-confirm" value="Tambah">
                 </div>
             </div>
+            <?php } ?>
             <div class="inner" id="data">
                 <table>
                     <tr>
